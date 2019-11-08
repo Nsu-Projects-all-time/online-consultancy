@@ -1,17 +1,38 @@
+
+
 function validate() {
 	
 	
-	var uname=document.forms["myform2"]["uname"].value;
-	var pass=document.forms["myform2"]["pass"].value;
+	var uname=document.forms["myform"]["username"];
+	var pass=document.forms["myform"]["password"];
 	
 	
-	 if(uname=="" || uname==" ") 
+	 if(uname.value=="") 
 		 
-	 {window.alert("Username cannot be empty and whiteSpace");
+	 {
+	 	//window.alert("Username can not be empty");
+	 	username_error=document.getElementById("username_error");
+	 	username_error.style.color="red";
+	 	username_error.innerHTML="Username can not be empty";
+	 	uname.focus();	
+	 	return false;
+
+
+
+
      }
-     if (pass=="" || pass.length<8 ||  pass.length>32)
+     if (pass.value=="")
      {
-     window.alert("length must be between 8 to 32 characters");
+     //window.alert("Password can not be empty");
+     password_error=document.getElementById("password_error");
+     password_error.style.color="red";
+     password_error.innerHTML="Password can not be empty";
+     pass.focus();
+     return false;
+     
+
+
+
      }
 
 }
