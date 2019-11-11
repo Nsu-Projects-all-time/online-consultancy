@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/home_style.css">
 </head>
 <body>
 
@@ -25,20 +25,16 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Deals</a></li>
-        <li><a href="#">Stores</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="active"><a href="home.html">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <li><a href="user_profile.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<br>
+<br><br>
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Online Consultancy</h1>
@@ -46,7 +42,17 @@
   </div>
 </div>
 <br>
-
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort by
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      <li><a href="#">Doctor</a></li>
+      <li><a href="#">Engineer</a></li>
+      <li><a href="#">Lawyer</a></li>
+      <li><a href="#">Top advisor</a></li>
+    </ul>
+  </div>
 
 <br>
 
@@ -57,7 +63,7 @@
         <div class="panel-heading text-center">
           <b class="">Md Asaduzzaman Sakib</b>
         </div>
-        <div class="panel-body "><img src="img/sakib.jpg" class="img-responsive mg-fluid" style="width:100%" alt="Image"></div>
+        <div class="panel-body "><img src="images/sakib.jpg" class="img-responsive mg-fluid" style="width:100%" alt="Image"></div>
         <div class="panel-footer text-center">
         <p>Chief Software Developer</p>
         <a href="profile.html" class="btn btn-primary">View Details</a>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Form</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="main.js"></script>
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('images/bin2.jpeg');">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="images/sakib2.jpg" alt="">
+				</div>
+				<form action="home.html" name="login_form" onsubmit="return login_validate();" >
+					<h3>Login here</h3>
+
+
+					<div class="form-wrapper">
+						<input type="text" name="email" placeholder="Email Address" class="form-control">
+						<i class="zmdi zmdi-email"></i>
+					</div>
+
+					<div class="form-wrapper">
+						<input type="password" name="password" placeholder="Password" class="form-control">
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+
+					<button type="submit">Login
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<a href="registration.html">Do not have accout?create account</a>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>
