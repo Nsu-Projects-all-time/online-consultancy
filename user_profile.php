@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Profile</title>
+  <title>User Profile</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -29,8 +29,8 @@
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="user_profile.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
   </div>
@@ -41,17 +41,20 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="images\sakib.jpg" alt=""/>
-
+                            <img src="images/sakib.jpg" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        Md Asaduzzaman Sakib
+                                        Kshiti Ghelani
                                     </h5>
                                     <h6>
-                                        Chief Software Developer
+                                        Web Developer and Designer
                                     </h6>
                                     <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -62,7 +65,9 @@
                             </ul>
                         </div>
                     </div>
-
+                    <div class="col-md-2">
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
@@ -86,7 +91,7 @@
                                                 <label>User Id</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Sakib123</p>
+                                                <p>Kshiti123</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -94,7 +99,7 @@
                                                 <label>Name</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Md Asaduzzaman Sakib</p>
+                                                <p>Kshiti Ghelani</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -102,7 +107,7 @@
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Sakib123@gmail.com</p>
+                                                <p>kshitighelani@gmail.com</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -110,7 +115,7 @@
                                                 <label>Phone</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>+8801700000000</p>
+                                                <p>123 456 7890</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -118,7 +123,7 @@
                                                 <label>Profession</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Chief Software Developer</p>
+                                                <p>Web Developer and Designer</p>
                                             </div>
                                         </div>
                             </div>
