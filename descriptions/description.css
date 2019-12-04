@@ -29,3 +29,8 @@ footer {
   background-color: #0062cc;
   padding: 25px;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+  }
