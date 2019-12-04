@@ -69,7 +69,7 @@ if(isset($_POST["update"])){
   </div>
 
 </div>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 $('#testButton').click(function () {
   var name = $("#name").val();
   var email = $("#email").val();
@@ -84,7 +84,7 @@ $('#testButton').click(function () {
     alert( "Data Saved: " + msg );
 });
 });​
-</script> -->
+</script>
 
 </body>
 </html>

@@ -4,14 +4,17 @@ include "db.php";
 if(isset($_REQUEST))
 {
 
-$user_id=$_POST['user_id'];
+$user_id=(int)$_POST['ui'];
 $skill_name=$_POST['skill_name'];
-$sql="INSERT INTO skills(skill_name,user_id) VALUES ('$skill_name','$user_id')";
-$result=mysql_query($conn,$sql);
-if($result){
-echo "You have been successfully subscribed.";
-}
-}
+$insert="INSERT INTO skills (skill_name,user_id) VALUES ('$skill_name','$user_id') ";
+
+if ($conn->query($insert) === TRUE) {
+
+       header("Location:login.php");
+    }
+else {
+        echo "Error: " . $insert . "<br>" . $conn->error;}
+      }
 
 
  ?>

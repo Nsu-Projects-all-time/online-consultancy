@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2019 at 06:05 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Generation Time: Dec 05, 2019 at 12:51 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 5.6.39
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -84,6 +84,19 @@ CREATE TABLE `skills` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `skills`
+--
+
+INSERT INTO `skills` (`skill_id`, `skill_name`, `user_id`) VALUES
+(1, 'dddd', 1),
+(2, 'ss', 1),
+(3, 'RR', 1),
+(4, 'xxx', 1),
+(5, 'ddddss', 1),
+(6, 'Ruby', 1),
+(7, 'Python', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -109,7 +122,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `name`, `email`, `gender`, `phone`, `password`, `acc_type`, `dob`, `description`, `image`, `cat_id`) VALUES
-(1, 'Jalis Mahamud Tarif', 'jalis@northsouth.edu', 'male', '0162370871111', '898a842ec485b8d46401f08610e74f99', 1, 2019, 'vvvccc', '', 1),
+(1, 'Jalis Mahamud Tarif', 'jalis@northsouth.edu', 'male', '0162370871111', '898a842ec485b8d46401f08610e74f99', 1, 2019, 'dlkfjdkjfsdjflksjdf', '', 0),
 (4, 'Sakib', 'sakib@northsouth.edu', 'male', '1111111111111', '96d8cc2cdb17c3439889733c1f5ce3d4', 0, 2019, '0', '', 0);
 
 --
@@ -161,7 +174,7 @@ ALTER TABLE `catagories`
 -- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `skill_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `skill_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`

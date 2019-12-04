@@ -22,15 +22,15 @@ session_start();
 			}
 			if(isset($_SESSION["id"])) {
 				if($GLOBALS['acc_type']=='1'){
-					header("Location:advisor_profile.html");
+					header("Location:advisor_profile.php");
 
 				}
 				else{
 					header("Location:home.php");
 				}
-				
-			}		
-		
+
+			}
+
 ?>
 
 
@@ -78,6 +78,6 @@ session_start();
 				</form>
 			</div>
 		</div>
-		
+
 	</body>
 </html>
