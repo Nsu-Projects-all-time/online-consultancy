@@ -74,7 +74,7 @@ session_start();
 					<button type="submit" name="login">Login
 						<i class="zmdi zmdi-arrow-right"></i>
 					</button>
-					<a href="registration.html">Do not have accout?create account</a>
+					<a href="register.php">Do not have accout?create account</a>
 				</form>
 			</div>
 		</div>

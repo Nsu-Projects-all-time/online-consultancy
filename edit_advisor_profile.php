@@ -24,11 +24,22 @@ if(isset($_POST["update"])){
 <br>
 <div class="container emp-profile">
   <div class="row">
-    <div class="col-md-4">
-      change profile picture
+    <div class="col-md-6">
+      <h4 class="alert alert-success">Upload profile picture</h4>
+      <div class="well">
+        <form id="form1" action="upload_image.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="id" value="<?php echo $submit_id;?>">
+            <input type='file' name="image" id="imgInp" />
+            <img id="blah" src="" alt="" style="height:300px;width:300px;"/><br>
+            <input type="submit"  value="upload image">
+        </form>
+
+      </div>
+
+
 
     </div>
-    <div class="col-md-8">
+    <div class="col-md-6">
       <form action="" method="post">
         <div class="form-group">
           <label for="email">Profession</label>
@@ -84,6 +95,26 @@ $('#testButton').click(function () {
     alert( "Data Saved: " + msg );
 });
 });​
+</script>
+<script type="text/javascript">
+
+//image upload
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#imgInp").change(function(){
+    readURL(this);
+});
+
 </script>
 
 </body>

@@ -6,25 +6,20 @@ $sql="select * from users where user_id='$id' ";
 
  ?>
     <br>
-<?php
- if($row["image"]=="" || $row["description"]=="" || $row["cat_id"]==""){
- ?>
+
         <div class="container emp-profile">
             <div class="alert alert-danger alert-dismissible">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <strong>Danger</strong> You need to update your profile.
             </div>
-            <?php } ?>
+
 
                 <div class="row">
                     <div class="col-md-4">
 
                         <div class="profile-img">
 
-                            <img src="images/sakib.jpg" alt="" />
-                            <div class="file btn btn-lg btn-primary">
-                                
-                            </div>
+                            <img src="images/<?php echo $row["image"];?>" alt="" />
                         </div>
                     </div>
                     <div class="col-md-6">
