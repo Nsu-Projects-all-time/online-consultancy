@@ -35,9 +35,10 @@ if(empty($_SESSION["name"])){
         <li class="active"><a href="home.html">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="user_profile.html"><span class="glyphicon glyphicon-user"></span> <?php 
+        <li><a href="user_profile.html"><span class="glyphicon glyphicon-user"></span> <?php
         echo ($_SESSION["name"]);
         ?></a></li>
+        <li><a href="about_us.html"><span class="glyphicon glyphicon-log-out"></span> About us</a></li>
         <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>

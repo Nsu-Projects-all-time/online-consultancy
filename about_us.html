@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/about_us.css">
+</head>
+<body>
+
+
+
+
+<div class="jumbotron">
+  <div class="container text-center text-light">
+    <h1 class="text-light">Online Consultancy</h1>
+    <p>Our Team Members</p>
+  </div>
+</div>
+<br>
+
+<section>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <b class="">Md Asaduzzaman Sakib</b>
+        </div>
+        <div class="panel-body "><img src="images/sakib.jpg" class="img-responsive mg-fluid" style="width:100%" alt="Image"></div>
+        <div class="panel-footer text-center">
+        <p>Chief Software Developer</p>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <b class="">Md Asaduzzaman Sakib</b>
+        </div>
+        <div class="panel-body "><img src="images/sakib.jpg" class="img-responsive mg-fluid" style="width:100%" alt="Image"></div>
+        <div class="panel-footer text-center">
+        <p>Chief Software Developer</p>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <b class="">Md Asaduzzaman Sakib</b>
+        </div>
+        <div class="panel-body "><img src="images/sakib.jpg" class="img-responsive mg-fluid" style="width:100%" alt="Image"></div>
+        <div class="panel-footer text-center">
+        <p>Chief Software Developer</p>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <b class="">Md Asaduzzaman Sakib</b>
+        </div>
+        <div class="panel-body "><img src="images/sakib.jpg" class="img-responsive mg-fluid" style="width:100%" alt="Image"></div>
+        <div class="panel-footer text-center">
+        <p>Chief Software Developer</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="text-center pt-3 py-5">
+      <div>
+      <h1 class="get pb-5"> GET OUR LOCATION</h1>
+      <div id="map"></div>
+          <script>
+
+      function initMap() {
+
+        var options = {lat: 23.8151, lng: 90.4255};
+
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 14, center: options});
+
+        var marker = new google.maps.Marker({position: options, map: map});
+      }
+          </script>
+
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY07oc8lYbLrazcJS6MZ-fZv1MpF1782Y&callback=initMap">
+          </script>
+
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+
+</body>
+</html>

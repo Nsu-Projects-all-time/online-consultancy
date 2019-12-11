@@ -19,20 +19,16 @@ include 'header.php';
             Skills
         </h1>
         <p>Java</p>
-        
+
     </div>
     <div class="col-md-4">
         <h1>Rating</h1>
         <div>
-            <a href="" class="btn btn-success">Get Consultancy</a>
+            <a href="ssl_payment.php" class="btn btn-success">Get Consultancy</a>
         </div>
-        
+
     </div>
 </div>
 
 
 </div>
-
-
-
-
