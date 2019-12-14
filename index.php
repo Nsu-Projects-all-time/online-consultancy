@@ -56,7 +56,7 @@ session_start();
 				<div class="image-holder">
 					<img src="images/sakib2.jpg" alt="">
 				</div>
-				<form action="login.php" method="post" name="login_form" onsubmit="return login_validate();" >
+				<form action="index.php" method="post" name="login_form" onsubmit="return login_validate();" >
 					<h3>Login here</h3>
 					<p><?php if(isset($message)){ echo $message; } ?></p>
 

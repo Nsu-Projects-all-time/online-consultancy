@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(empty($_SESSION["name"])){
-  header("Location:login.php");
+  header("Location:index.php");
 }
 include "db.php";
 $id=$_SESSION["id"];

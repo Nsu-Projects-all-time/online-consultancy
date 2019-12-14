@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2019 at 12:51 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 5.6.39
+-- Generation Time: Dec 14, 2019 at 06:06 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -89,13 +89,28 @@ CREATE TABLE `skills` (
 --
 
 INSERT INTO `skills` (`skill_id`, `skill_name`, `user_id`) VALUES
-(1, 'dddd', 1),
-(2, 'ss', 1),
-(3, 'RR', 1),
-(4, 'xxx', 1),
-(5, 'ddddss', 1),
-(6, 'Ruby', 1),
-(7, 'Python', 1);
+(1, 'yyy', 1),
+(2, 'kkk', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_payment`
+--
+
+CREATE TABLE `tbl_payment` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `item_number` varchar(255) NOT NULL,
+  `amount` double(10,2) NOT NULL,
+  `currency_code` varchar(55) NOT NULL,
+  `txn_id` varchar(255) NOT NULL,
+  `payment_status` varchar(255) NOT NULL,
+  `payment_response` text NOT NULL,
+  `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `sender_id` int(11) NOT NULL,
+  `reciever_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -114,16 +129,17 @@ CREATE TABLE `users` (
   `dob` int(11) NOT NULL,
   `description` varchar(255) NOT NULL,
   `image` varchar(200) NOT NULL,
-  `cat_id` int(11) NOT NULL
+  `cat_id` int(11) NOT NULL,
+  `consul_rate` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `name`, `email`, `gender`, `phone`, `password`, `acc_type`, `dob`, `description`, `image`, `cat_id`) VALUES
-(1, 'Jalis Mahamud Tarif', 'jalis@northsouth.edu', 'male', '0162370871111', '898a842ec485b8d46401f08610e74f99', 1, 2019, 'dlkfjdkjfsdjflksjdf', '', 0),
-(4, 'Sakib', 'sakib@northsouth.edu', 'male', '1111111111111', '96d8cc2cdb17c3439889733c1f5ce3d4', 0, 2019, '0', '', 0);
+INSERT INTO `users` (`user_id`, `name`, `email`, `gender`, `phone`, `password`, `acc_type`, `dob`, `description`, `image`, `cat_id`, `consul_rate`) VALUES
+(1, 'Jalis Mahamud Tarif', 'jalis@northsouth.edu', 'male', '0162370871111', '898a842ec485b8d46401f08610e74f99', 1, 2019, 'bbb', '17157737_1266884096729052_2735519168580387491_o.jpg', 0, 0),
+(4, 'Sakib', 'sakib@northsouth.edu', 'male', '1111111111111', '96d8cc2cdb17c3439889733c1f5ce3d4', 0, 2019, '0', '', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -146,6 +162,12 @@ ALTER TABLE `catagories`
 --
 ALTER TABLE `skills`
   ADD PRIMARY KEY (`skill_id`);
+
+--
+-- Indexes for table `tbl_payment`
+--
+ALTER TABLE `tbl_payment`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -174,7 +196,13 @@ ALTER TABLE `catagories`
 -- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `skill_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `skill_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tbl_payment`
+--
+ALTER TABLE `tbl_payment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
