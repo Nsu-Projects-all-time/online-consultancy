@@ -14,9 +14,10 @@ if(isset($_POST["update"])){
   $name=$_POST['name'];
   $email=$_POST['email'];
   $phone=$_POST['phone'];
+  $consul_rate=$_POST["consul"];
   $description=$_POST['description'];
   $cat_id=$_POST['cat_id'];
-  $update="UPDATE users SET name='$name',email='$email',phone='$phone',description='$description',cat_id='$cat_id' WHERE user_id='$submit_id' ";
+  $update="UPDATE users SET name='$name',email='$email',phone='$phone',consul_rate='$consul_rate',description='$description',cat_id='$cat_id' WHERE user_id='$submit_id' ";
   mysqli_query($conn,$update);
   header("Location:advisor_profile.php");
 }
@@ -28,7 +29,7 @@ if(isset($_POST["update"])){
       <h4 class="alert alert-success">Upload profile picture</h4>
       <div class="well">
         <form id="form1" action="upload_image.php" method="post" enctype="multipart/form-data">
-            <input type="text" name="id" value="<?php echo $submit_id;?>">
+            <input type="hidden" name="id" value="<?php echo $submit_id;?>">
             <input type='file' name="image" id="imgInp" />
             <img id="blah" src="" alt="" style="height:300px;width:300px;"/><br>
             <input type="submit"  value="upload image">
@@ -64,6 +65,10 @@ if(isset($_POST["update"])){
         <div class="form-group">
           <label for="phone">Phone:</label>
           <input type="text" class="form-control" id="phone" placeholder="Enter phone no" name="phone" value="<?php echo $row["phone"];?>">
+        </div>
+        <div class="form-group">
+          <label for="phone">Consultancy Rate</label>
+          <input type="text" class="form-control" id="phone" placeholder="Enter phone no" name="consul" value="<?php echo $row["consul_rate"];?>">
         </div>
         <div class="form-group">
  <label for="comment">Description:</label>

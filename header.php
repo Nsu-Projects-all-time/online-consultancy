@@ -1,4 +1,5 @@
 <?php
+include "db.php";
 session_start();
 if(empty($_SESSION["name"])){
   header("Location:index.php");

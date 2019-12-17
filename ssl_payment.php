@@ -1,11 +1,22 @@
 <?php
+include "db.php";
+$advisor_id=$_GET['advisor_id'];
+
+$sql="select * from users where user_id='$advisor_id' ";
+$result = mysqli_query($conn,$sql);
+$row=$result->fetch_assoc();
+
+
+
+
+
 $post_data = array();
 $post_data['store_id'] = "onlin5df060f43b0da";
 $post_data['store_passwd'] = "onlin5df060f43b0da@ssl";
-$post_data['total_amount'] = "3000";
+$post_data['total_amount'] = $row["consul_rate"];
 $post_data['currency'] = "BDT";
 $post_data['tran_id'] = "SSLCZ_TEST_".uniqid();
-$post_data['success_url'] = "http://localhost/new_sslcz_gw/success.php";
+$post_data['success_url'] = "http://localhost/online-consultancy/chat.php";
 $post_data['fail_url'] = "http://localhost/new_sslcz_gw/fail.php";
 $post_data['cancel_url'] = "http://localhost/new_sslcz_gw/cancel.php";
 # $post_data['multi_card_name'] = "mastercard,visacard,amexcard";  # DISABLE TO DISPLAY ALL AVAILABLE
@@ -16,15 +27,15 @@ $post_data['emi_max_inst_option'] = "9";
 $post_data['emi_selected_inst'] = "9";
 
 # CUSTOMER INFORMATION
-$post_data['cus_name'] = "Test Customer";
-$post_data['cus_email'] = "test@test.com";
+$post_data['cus_name'] = $row["name"];
+$post_data['cus_email'] = $row["email"];
 $post_data['cus_add1'] = "Dhaka";
 $post_data['cus_add2'] = "Dhaka";
 $post_data['cus_city'] = "Dhaka";
 $post_data['cus_state'] = "Dhaka";
 $post_data['cus_postcode'] = "1000";
 $post_data['cus_country'] = "Bangladesh";
-$post_data['cus_phone'] = "01711111111";
+$post_data['cus_phone'] = $row["phone"];
 $post_data['cus_fax'] = "01711111111";
 
 # SHIPMENT INFORMATION
