@@ -9,7 +9,7 @@ $id=$_SESSION["id"];
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Advisor Profile</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -37,6 +37,7 @@ $id=$_SESSION["id"];
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="chat.php"><span class="glyphicon glyphicon-log-in"></span> Chat</a></li>
         <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>

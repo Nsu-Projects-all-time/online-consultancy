@@ -8,6 +8,8 @@ session_start();
 			$password = md5($_POST['password']);
 
 			$result = mysqli_query($conn,"SELECT * FROM users WHERE email='$email' and password = '$password'");
+
+
 			$row  = mysqli_fetch_array($result);
 			// print_r($row);
 			// die("=======");
@@ -15,7 +17,29 @@ session_start();
 				$_SESSION["id"] = $row[user_id];
 				$_SESSION["name"] = $row[name];
 				$GLOBALS['acc_type']=$row[acc_type];
+
+				//cookies
+
+				if(!empty($_POST["remember"])) {
+	setcookie ("email",$email,time()+ 3600);
+	setcookie ("password",$password,time()+ 3600);
+	//echo "Cookies Set Successfuly";
+} else {
+	setcookie("username","");
+	setcookie("password","");
+
+}
 				// die($GLOBALS['acc_type']);
+				$login_details="INSERT INTO login_details (user_id) VALUES ('".$row['user_id']."')";
+				if (mysqli_query($conn, $login_details)) {
+					$_SESSION['login_details_id'] = mysqli_insert_id($conn);
+    		 //$last_id = mysqli_insert_id($conn);
+
+
+				} else {
+    	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}
+
 
 			} else {
 				$message = "Invalid Username or Password!";}
@@ -70,6 +94,10 @@ session_start();
 						<input type="password" name="password" placeholder="Password" class="form-control">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
+					<div class="field-group">
+		<div><input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> />
+		<label for="remember-me">Remember me</label>
+	</div>
 
 					<button type="submit" name="login">Login
 						<i class="zmdi zmdi-arrow-right"></i>
